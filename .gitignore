@@ -1,6 +1,9 @@
 # Compiled python modules.
 /*.pyc
 
+# Build folder.
+/build/
+
 # Setuptools distribution folder.
 /dist/
 
@@ -10,3 +13,6 @@
 
 # Log file generated during test.
 /*.log
+
+# Folders containing xml after build.
+/.idea/
