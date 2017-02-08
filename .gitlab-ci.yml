@@ -1,5 +1,6 @@
 before_script:
-    - apt-get install python-pip
+    - virtualenv aws
+    - source aws/bin/activate
     - pip install setuptools
     - python setup.py install
     - sleep 2
@@ -7,12 +8,14 @@ before_script:
     - aws configure set aws_secret_access_key DogyFvEMcd+0NwH30Ad9l4P2mWH4p7nq1IgHnz4P
     - aws configure set default.region us-east-1
 
-aws-actions:
-    script:
-        - aws-actions -h
-        - aws-actions list
-        - aws-actions list -h
-        - aws-actions status 1
-        - aws-actions status -h
-        - aws-actions start -h
-        - aws-actions stop -h
+aws-actions:python:
+  image: python:2.7
+  stage: test
+  script:
+      - aws-actions -h
+      - aws-actions list
+      - aws-actions list -h
+      - aws-actions status 1
+      - aws-actions status -h
+      - aws-actions start -h
+      - aws-actions stop -h
