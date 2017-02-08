@@ -3,6 +3,6 @@
 virtualenv aws
 source aws/bin/activate
 
-bin/pip install setuptools
+pip install setuptools
 
-bin/python setup.py test
+python setup.py test
