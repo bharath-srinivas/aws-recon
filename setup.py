@@ -7,6 +7,6 @@ setup(
     author='Bharath Srinivas',
     author_email='bharath@screen-magic.com',
     scripts=['bin/aws-actions'],
-    install_requires=['awscli', 'boto3'],
+    install_requires=['setuptools', 'awscli', 'boto3'],
     packages=['functions'],
 )
