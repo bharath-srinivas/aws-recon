@@ -7,7 +7,7 @@ created_on = '01-02-2017'
 
 region = os.popen('aws configure get region').read()
 
-logging.basicConfig(filename='../logging.log', format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
+logging.basicConfig(filename='logging.log', format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
