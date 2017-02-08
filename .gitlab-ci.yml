@@ -1,4 +1,5 @@
 before_script:
+    - apt-get install python-pip
     - pip install setuptools
     - python setup.py install
     - sleep 2
