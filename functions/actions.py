@@ -1,13 +1,10 @@
 import boto3
 import logging
-import os
 
 __author__ = 'Bharath Srinivas'
 created_on = '01-02-2017'
 
-region = os.popen('aws configure get region').read()
-
-logging.basicConfig(filename='logging.log', format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
+logging.basicConfig(filename='./logging.log', format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
@@ -26,8 +23,6 @@ def list_instances(selector):
 
     def create_ordered_list(arg):
         instances = dict(enumerate(arg, 1))
-        # lists = ('{}. {}'.format(key, value) for key, value in instances.items())
-        # return lists
         for key, value in instances.items():
             print '{}) {}'.format(key, value)
 
@@ -61,7 +56,7 @@ def instance_state(selector):
 
 
 def start_instance(selector):
-    ec2 = boto3.client('ec2', region_name=region)
+    ec2 = boto3.client('ec2')
     selected_instance = create_list(list_instances(''))
     if max_instances(selector):
         return 'The entered value exceeds the number of instances available.'
@@ -78,7 +73,7 @@ def start_instance(selector):
 
 
 def stop_instance(selector):
-    ec2 = boto3.client('ec2', region_name=region)
+    ec2 = boto3.client('ec2')
     selected_instance = create_list(list_instances(''))
     if max_instances(selector):
         return 'The entered value exceeds the number of instances available.'
