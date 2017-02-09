@@ -16,5 +16,3 @@
 
 # Folders containing xml after build.
 /.idea/
-
-/bin/*.log
