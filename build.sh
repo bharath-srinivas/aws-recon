@@ -7,6 +7,6 @@ pip install setuptools
 
 python setup.py test
 
-aws-actions list
+/usr/local/bin/aws-actions list
 
-aws-actions status 1
+/usr/local/bin/aws-actions status 1
