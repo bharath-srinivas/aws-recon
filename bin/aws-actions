@@ -65,7 +65,7 @@ if __name__ == '__main__':
     halt.add_argument('halt_instance', action='store', type=int, metavar='instance',
                       help='The instance\'s number from the list')
 
-    args = parser.parse_args(['list', '-h'])
+    args = parser.parse_args()
 
     if args.cmd == 'list':
         if args.choice == 'id':
