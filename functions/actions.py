@@ -1,10 +1,13 @@
 import boto3
 import logging
+from os.path import expanduser
 
 __author__ = 'Bharath Srinivas'
 created_on = '01-02-2017'
 
-logging.basicConfig(filename='./logging.log', format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
+usr_home = expanduser('~')
+
+logging.basicConfig(filename='{}/logging.log'.format(usr_home), format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
