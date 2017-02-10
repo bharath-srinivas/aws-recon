@@ -24,7 +24,7 @@ wget http://files.txtbox.in/Ubuntu/aws-actions_1.0-1_all.deb
 sudo dpkg -i aws-actions_1.0-1_all.deb
 ```
 
-3. That's it you're good to go. Refer to the usage below to see the list of commands
+3. That's it you're good to go. Refer to the [usage](#Usage) below to see the list of commands
 
 ### **Installing from the source**
 
@@ -51,7 +51,7 @@ You should see something like below in the output
 aws-actions==1.0
 ```
 
-4. If you see the above output, then you're good to go. Check the usage section for the list of commands. Otherwise check whether you've all the dependencies installed. This program relies on modules like awscli and boto3. By default it will be installed along with the setup. If it fails to install, you've to install manually using `pip install`.
+4. If you see the above output, then you're good to go. Check the [usage](#Usage) section for the list of commands. Otherwise check whether you've all the dependencies installed. This program relies on modules like awscli and boto3. By default it will be installed along with the setup. If it fails to install, you've to install manually using `pip install`.
 
 ### **Usage**
 
@@ -77,7 +77,7 @@ optional arguments:
   -v, --version  shows the version and exit
 ```
 
-To check the help message of each command, you can run `aws-actions command -h` or `aws-actions command --help`. This will display the sub-commands or arguments that can used with the command.
+To check the help message of each command, you can run `aws-actions command -h` or `aws-actions command --help`. This will display the sub-commands or arguments that can be used with the command.
 ```
 usage: aws-actions list [-h] [arg]
 
@@ -102,4 +102,4 @@ If you've installed it by following the steps in Installing from the source, per
 ```
 sudo pip uninstall aws-actions
 ```
-**Note: If you've installed it from the source, you've to uninstall the dependencies installed along with aws-actions installation manaully as the uninstallation will be incomplete. You can find these files using `pip freeze` command.**
+**Note: If you've installed it from the source, you've to uninstall the dependencies installed along with aws-actions installation manually as the uninstallation will be incomplete. You can find these files using `pip freeze` command.**
