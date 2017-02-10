@@ -60,7 +60,7 @@ This program is dependent on awscli and hence you have to configure your `AWS Ac
 ```
 aws configure
 ```
-Once the configure is done, you can perform the following operations
+Once the configuration is done, you can perform the following operations
 ```
 usage: aws-actions [-h] [-v] command ...
 
