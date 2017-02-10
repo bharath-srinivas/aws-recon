@@ -1,6 +1,6 @@
 # **AWS Actions**
 
-## v1.0 Initial release (2017-02-08)
+## v1.0 Beta release (2017-02-08)
 ### Features
 
 - List all the instances on a specific region based on their ID or name
