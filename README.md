@@ -24,7 +24,7 @@ wget http://files.txtbox.in/Ubuntu/aws-actions_1.0-1_all.deb
 sudo dpkg -i aws-actions_1.0-1_all.deb
 ```
 
-3. That's it you're good to go. Refer to the [usage](#Usage) below to see the list of commands
+3. That's it you're good to go. Refer to the [usage](#usage) below to see the list of commands
 
 ### **Installing from the source**
 
@@ -51,7 +51,7 @@ You should see something like below in the output
 aws-actions==1.0
 ```
 
-4. If you see the above output, then you're good to go. Check the [usage](#Usage) section for the list of commands. Otherwise check whether you've all the dependencies installed. This program relies on modules like awscli and boto3. By default it will be installed along with the setup. If it fails to install, you've to install manually using `pip install`.
+4. If you see the above output, then you're good to go. Check the [usage](#usage) section for the list of commands. Otherwise check whether you've all the dependencies installed. This program relies on modules like awscli and boto3. By default it will be installed along with the setup. If it fails to install, you've to install manually using `pip install`.
 
 ### **Usage**
 
