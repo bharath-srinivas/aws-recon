@@ -46,7 +46,6 @@ You can perform the above command without `sudo` in a `virtualenv`. If you do so
 ```
 pip freeze
 ```
-
 You should see something like below in the output
 ```
 aws-actions==1.0
