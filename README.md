@@ -32,7 +32,7 @@ To install from the source
 
 1. Clone the repository into your local machine using the following commands
 ```
-git clone http://10.103.8.2:8080/bharath/aws-actions.git
+git clone https://git.txtbox.in:8080/bharath/aws-actions.git
 ```
 
 2. Then install the package using the following commands
