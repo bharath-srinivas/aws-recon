@@ -1,6 +1,6 @@
-# **AWS Actions** [![build status](https://git.txtbox.in:8080/bharath/aws-actions/badges/master/build.svg)](https://git.txtbox.in:8080/bharath/aws-actions/commits/master)
+# **AWS Tool** [![build status](https://git.txtbox.in:8080/bharath/aws-tool/badges/master/build.svg)](https://git.txtbox.in:8080/bharath/aws-tool/commits/master)
 
-AWS Actions is a command-line tool written entirely on python. It can be used to perform basic operations on AWS instances like listing all the available instances, showing the status of the instance, starting and stopping the instance.
+AWS Tool is a command-line tool written entirely on python. It can be used to perform basic operations on AWS instances like listing all the available instances, showing the status of the instance, starting and stopping the instance.
 
 It uses AWS API to perform the tasks.
 
@@ -16,12 +16,12 @@ To install as debian package
 
 1. Get the .deb file from the file server using the following commands
 ```
-wget http://files.txtbox.in/Ubuntu/aws-actions_1.0-1_all.deb
+wget http://files.txtbox.in/Ubuntu/aws-tool_1.1.0-1_all.deb
 ```
 
 2. After downloading the deb file, either you can double click to install it or run the following command
 ```
-sudo dpkg -i aws-actions_1.0-1_all.deb
+sudo dpkg -i aws-tool_1.1.0-1_all.deb
 ```
 
 3. That's it you're good to go. Refer to the [usage](#usage) below to see the list of commands
@@ -32,12 +32,12 @@ To install from the source
 
 1. Clone the repository into your local machine using the following commands
 ```
-git clone https://git.txtbox.in:8080/bharath/aws-actions.git
+git clone https://git.txtbox.in:8080/bharath/aws-tool.git
 ```
 
 2. Then install the package using the following commands
 ```
-cd aws-actions
+cd aws-tool
 sudo python setup.py install
 ```
 You can perform the above command without `sudo` in a `virtualenv`. If you do so, you'll need to activate the `virtualenv` everytime to use the tool as its dependencies will be installed within the `virtualenv`.
@@ -48,7 +48,7 @@ pip freeze
 ```
 You should see something like below in the output
 ```
-aws-actions==1.0
+aws-tool==1.1.0
 ```
 
 4. If you see the above output, then you're good to go. Check the [usage](#usage) section for the list of commands. Otherwise check whether you've all the dependencies installed. This program relies on modules like awscli and boto3. By default it will be installed along with the setup. If it fails to install, you've to install manually using `pip install`.
@@ -61,7 +61,7 @@ aws configure
 ```
 Once the configuration is done, you can perform the following operations
 ```
-usage: aws-actions [-h] [-v] command ...
+usage: aws-tool [-h] [-v] command ...
 
 The available commands are:
   list        Lists all the instances
@@ -77,9 +77,9 @@ optional arguments:
   -v, --version  shows the version and exit
 ```
 
-To check the help message of each command, you can run `aws-actions command -h` or `aws-actions command --help`. This will display the sub-commands or arguments that can be used with the command.
+To check the help message of each command, you can run `aws-tool command -h` or `aws-tool command --help`. This will display the sub-commands or arguments that can be used with the command.
 ```
-usage: aws-actions list [-h] [arg]
+usage: aws-tool list [-h] [arg]
 
 List description
 
@@ -94,12 +94,12 @@ optional arguments:
 
 To uninstall the tool if you've installed it by following the steps in Installing as debian package, run the following command
 ```
-sudo apt-get remove aws-actions
+sudo apt-get remove aws-tool
 ```
 This will completely remove all the files installed during the setup process.
 
 If you've installed it by following the steps in Installing from the source, perform the following command
 ```
-sudo pip uninstall aws-actions
+sudo pip uninstall aws-tool
 ```
-**Note: If you've installed it from the source, you've to uninstall the dependencies installed along with aws-actions installation manually as the uninstallation will be incomplete. You can find these files using `pip freeze` command.**
+**Note: If you've installed it from the source, you've to uninstall the dependencies installed along with aws-tool installation manually as the uninstallation will be incomplete. You can find these files using `pip freeze` command.**

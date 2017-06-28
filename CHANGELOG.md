@@ -1,4 +1,14 @@
-# **AWS Actions**
+# **AWS Tool**
+
+## v1.1.0 Alpha release (2017-06-27)
+### Features
+
+- Added feature to show private and public IP address of the instance
+
+### Build
+
+- Changed the name of the tool to something meaningful
+- Made some minor optimizations
 
 ## v1.0 Beta release (2017-02-08)
 ### Features

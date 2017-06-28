@@ -29,6 +29,10 @@ def stop(arg):
     return functions.stop(arg)
 
 
+def get_ip_addr(arg):
+    return functions.get_ip_address(arg)
+
+
 def signal_handler(signal, handler):
     print '\nYou pressed Ctrl+C!'
     sys.exit(0)
@@ -40,6 +44,7 @@ if __name__ == '__main__':
                                      description=textwrap.dedent('''The available commands are:
   list        Lists all the instances
   status      Shows the status of the specified instance
+  show-ip     Shows the public and private IP address of an instance
   start       Starts the specified instance
   stop        Stops the specified instance
                                      '''))
@@ -65,6 +70,10 @@ if __name__ == '__main__':
     halt.add_argument('halt_instance', action='store', type=int, metavar='instance',
                       help='The instance\'s number from the list')
 
+    get_ip = subparsers.add_parser('show-ip', description='Show IP description')
+    get_ip.add_argument('show_ip', action='store', type=int, metavar='instance',
+                        help='The instance\'s number from the list')
+
     args = parser.parse_args()
 
     if args.cmd == 'list':
@@ -81,3 +90,6 @@ if __name__ == '__main__':
 
     elif args.cmd == 'stop':
         print stop(args.halt_instance)
+
+    elif args.cmd == 'show-ip':
+        print get_ip_addr(args.show_ip)

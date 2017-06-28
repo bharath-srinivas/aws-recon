@@ -8,6 +8,10 @@ def list_all_instances(arg):
     return actions.list_instances(arg)
 
 
+def get_ip_address(arg):
+    return actions.get_ip_address(arg)
+
+
 def state(arg):
     return actions.instance_state(arg)
 
