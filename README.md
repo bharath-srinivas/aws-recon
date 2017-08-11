@@ -66,6 +66,7 @@ usage: aws-tool [-h] [-v] command ...
 The available commands are:
   list        Lists all the instances
   status      Shows the status of the specified instance
+  show-ip     Shows the public and private IP address of an instance
   start       Starts the specified instance
   stop        Stops the specified instance
 
