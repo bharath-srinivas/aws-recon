@@ -16,12 +16,12 @@ To install as debian package
 
 1. Get the .deb file from the file server using the following commands
 ```
-wget http://files.txtbox.in/Ubuntu/aws-tool_1.1.0-1_all.deb
+wget http://10.103.2.5/Ubuntu/aws-tool_1.2.0-1_all.deb
 ```
 
 2. After downloading the deb file, either you can double click to install it or run the following command
 ```
-sudo dpkg -i aws-tool_1.1.0-1_all.deb
+sudo dpkg -i aws-tool_1.2.0-1_all.deb
 ```
 
 3. That's it you're good to go. Refer to the [usage](#usage) below to see the list of commands
@@ -48,7 +48,7 @@ pip freeze
 ```
 You should see something like below in the output
 ```
-aws-tool==1.1.0
+aws-tool==1.2.0
 ```
 
 4. If you see the above output, then you're good to go. Check the [usage](#usage) section for the list of commands. Otherwise check whether you've all the dependencies installed. This program relies on modules like awscli and boto3. By default it will be installed along with the setup. If it fails to install, you've to install manually using `pip install`.
@@ -69,6 +69,7 @@ The available commands are:
   show-ip     Shows the public and private IP address of an instance
   start       Starts the specified instance
   stop        Stops the specified instance
+  lambda      Performs lambda related operations
 
 positional arguments:
   command        sub-command to run

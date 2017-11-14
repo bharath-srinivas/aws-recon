@@ -1,5 +1,17 @@
 # **AWS Tool**
 
+## v1.2.0 Stable release (2017-11-14)
+### Features
+
+- Added feature to list all the available lambda functions irrespective of region
+- Added feature to invoke a lambda function synchronously in 'Request-Response' invocation type
+
+### Improvements
+
+- Modified the project architecture for improved performance
+- Removed extra function calls to improve execution speed
+- Updated README
+
 ## v1.1.0 Alpha release (2017-06-27)
 ### Features
 

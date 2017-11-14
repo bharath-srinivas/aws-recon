@@ -107,3 +107,33 @@ def get_ip_address(selector):
     except Exception as e:
         logger.error(e)
         return 'Something went wrong. Please check the logs at ~/logging.log.'
+
+
+def list_lambdas(selector=0):
+    aws_lambda = boto3.client('lambda')
+    try:
+        function_list = aws_lambda.list_functions()
+        function_names = []
+        for functions in function_list['Functions']:
+            function_names.append(functions['FunctionName'])
+        function_obj = create_list(function_names)
+        if not selector:
+            for key, val in function_obj.items():
+                print '{}) {}'.format(key, val)
+            return
+        return function_obj.get(selector)
+    except Exception as e:
+        logger.error(e)
+        return 'Something went wrong. Please check the logs at ~/logging.log.'
+
+
+def invoke_lambda(selector):
+    aws_lambda = boto3.client('lambda')
+    try:
+        response = aws_lambda.invoke(FunctionName=list_lambdas(selector))
+        status_code = response['StatusCode']
+        request_id = response['ResponseMetadata']['RequestId']
+        return 'Status Code: {}'.format(status_code) + '\nRequest ID: {}'.format(request_id)
+    except Exception as e:
+        logger.error(e)
+        return 'Something went wrong. Please check the logs at ~/logging.log.'
