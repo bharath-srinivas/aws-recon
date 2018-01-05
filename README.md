@@ -1,6 +1,6 @@
-# **AWS Tool** [![build status](https://git.txtbox.in:8080/bharath/aws-tool/badges/master/build.svg)](https://git.txtbox.in:8080/bharath/aws-tool/commits/master)
+# **AWS Recon**
 
-AWS Tool is a command-line tool written entirely on python. It can be used to perform basic operations on AWS instances like listing all the available instances, showing the status of the instance, starting and stopping the instance.
+AWS Recon is a command-line tool written entirely on python. It can be used to perform basic operations on AWS instances like listing all the available instances, showing the status of the instance, starting and stopping the instance.
 
 It uses AWS API to perform the tasks.
 
@@ -14,14 +14,14 @@ The program can be installed either from the source (as a package) or using the 
 
 To install as debian package
 
-1. Get the .deb file from the file server using the following commands
-```
-wget http://10.103.2.5/Ubuntu/aws-tool_1.2.0-1_all.deb
+1. Get the .deb file from the releases either by visiting `https://github.com/bharath-srinivas/aws-recon/releases` directly or by using the following command:
+```bash
+$ wget https://github.com/bharath-srinivas/aws-recon/releases/download/v0.3.0/aws-recon_0.3.0-1_all.deb
 ```
 
-2. After downloading the deb file, either you can double click to install it or run the following command
-```
-sudo dpkg -i aws-tool_1.2.0-1_all.deb
+2. After downloading the deb file, run the following command to install it:
+```bash
+$ sudo dpkg -i aws-recon_0.3.0-1_all.deb
 ```
 
 3. That's it you're good to go. Refer to the [usage](#usage) below to see the list of commands
@@ -31,24 +31,24 @@ sudo dpkg -i aws-tool_1.2.0-1_all.deb
 To install from the source
 
 1. Clone the repository into your local machine using the following commands
-```
-git clone https://git.txtbox.in:8080/bharath/aws-tool.git
+```bash
+$ git clone https://github.com/bharath-srinivas/aws-recon.git
 ```
 
 2. Then install the package using the following commands
-```
-cd aws-tool
-sudo python setup.py install
+```bash
+$ cd aws-recon
+$ sudo python setup.py install
 ```
 You can perform the above command without `sudo` in a `virtualenv`. If you do so, you'll need to activate the `virtualenv` everytime to use the tool as its dependencies will be installed within the `virtualenv`.
 
 3. Check whether the package has installed successfully
-```
-pip freeze
+```bash
+$ pip freeze
 ```
 You should see something like below in the output
 ```
-aws-tool==1.2.0
+aws-recon==0.3.0
 ```
 
 4. If you see the above output, then you're good to go. Check the [usage](#usage) section for the list of commands. Otherwise check whether you've all the dependencies installed. This program relies on modules like awscli and boto3. By default it will be installed along with the setup. If it fails to install, you've to install manually using `pip install`.
@@ -56,12 +56,12 @@ aws-tool==1.2.0
 ### **Usage**
 
 This program is dependent on awscli and hence you have to configure your `AWS Access Key ID`, `AWS Secret Access Key` and `Default region name` (`Default output format` is optional) in the awscli. To do this run the following command
-```
-aws configure
+```bash
+$ aws configure
 ```
 Once the configuration is done, you can perform the following operations
-```
-usage: aws-tool [-h] [-v] command ...
+```bash
+usage: aws-recon [-h] [-v] command ...
 
 The available commands are:
   list        Lists all the instances
@@ -79,9 +79,9 @@ optional arguments:
   -v, --version  shows the version and exit
 ```
 
-To check the help message of each command, you can run `aws-tool command -h` or `aws-tool command --help`. This will display the sub-commands or arguments that can be used with the command.
-```
-usage: aws-tool list [-h] [arg]
+To check the help message of each command, you can run `aws-recon command -h` or `aws-recon command --help`. This will display the sub-commands or arguments that can be used with the command.
+```bash
+usage: aws-recon list [-h] [arg]
 
 List description
 
@@ -95,13 +95,7 @@ optional arguments:
 ## **Uninstallation**
 
 To uninstall the tool if you've installed it by following the steps in Installing as debian package, run the following command
-```
-sudo apt-get remove aws-tool
+```bash
+$ sudo apt-get remove aws-recon
 ```
 This will completely remove all the files installed during the setup process.
-
-If you've installed it by following the steps in Installing from the source, perform the following command
-```
-sudo pip uninstall aws-tool
-```
-**Note: If you've installed it from the source, you've to uninstall the dependencies installed along with aws-tool installation manually as the uninstallation will be incomplete. You can find these files using `pip freeze` command.**

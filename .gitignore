@@ -7,6 +7,7 @@
 
 # Setuptools distribution folder.
 /dist/
+/deb_dist/
 
 # Python egg metadata, regenerated from source files by setuptools.
 /*.egg-info
@@ -15,5 +16,12 @@
 # Log file generated during test.
 /*.log
 
-# Folders containing xml after build.
+# Folders containing IDE configs.
 /.idea/
+
+# Archives generated during build
+*.tar.gz
+
+# Gitlab CI and build scripts
+*.yml
+build.sh

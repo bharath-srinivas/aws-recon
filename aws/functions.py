@@ -2,9 +2,6 @@ import boto3
 import logging
 from os.path import expanduser
 
-__author__ = 'Bharath Srinivas'
-created_on = '01-02-2017'
-
 usr_home = expanduser('~')
 
 logging.basicConfig(filename='{}/logging.log'.format(usr_home), format='%(asctime)s %(message)s',

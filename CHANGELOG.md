@@ -1,9 +1,9 @@
-# **AWS Tool**
+# **AWS Recon**
 
-## v1.2.0 Stable release (2017-11-14)
+## v0.3.0 Beta release (2017-11-14)
 ### Features
 
-- Added feature to list all the available lambda functions irrespective of region
+- Added feature to list all the available lambda aws irrespective of region
 - Added feature to invoke a lambda function synchronously in 'Request-Response' invocation type
 
 ### Improvements
@@ -12,7 +12,11 @@
 - Removed extra function calls to improve execution speed
 - Updated README
 
-## v1.1.0 Alpha release (2017-06-27)
+### Build
+
+- Changed the name officially from aws-recon to aws-recon
+
+## v0.2.0 Beta release (2017-06-27)
 ### Features
 
 - Added feature to show private and public IP address of the instance
@@ -22,7 +26,7 @@
 - Changed the name of the tool to something meaningful
 - Made some minor optimizations
 
-## v1.0 Beta release (2017-02-08)
+## v0.1.0 Initial release (2017-02-13)
 ### Features
 
 - List all the instances on a specific region based on their ID or name
@@ -35,4 +39,3 @@
 - Optimized the code to perform some operations faster
 - Optimized the code to handle all kind of errors and invalid values
 - Made some improvements in the argparse to display better help message
-- Added scripts to perform CI
