@@ -14,7 +14,7 @@
 
 ### Build
 
-- Changed the name officially from aws-recon to aws-recon
+- Changed the name officially from aws-tool to aws-recon
 
 ## v0.2.0 Beta release (2017-06-27)
 ### Features
